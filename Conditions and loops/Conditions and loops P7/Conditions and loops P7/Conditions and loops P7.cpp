@@ -4,9 +4,9 @@
 
 int main()
 {
-	int N = 8;
-	int W = 5;
-	int K = 8;
+    std::cout << "Enter N:";
+    int N;
+    std::cin >> N;
 
 	char x = 'X';
 
@@ -31,7 +31,7 @@ int main()
 				x = 'X';
 			}
 		}
-		
+
 		if (x == 'X')
 		{
 

@@ -1,47 +1,89 @@
 ﻿#include <iostream>
 
+void do_x()
+{
+    for (int i = 0; i < 3; i++)
+    {
+        std::cout << "X" ;
+    }
+}
+
+void do_()
+{
+    for (int i = 0; i < 3; i++)
+    {
+        std::cout << "." ;
+    }
+}
+
 
 
 int main()
 {
-	int N = 6;
-	int W = 5;
-	int K = 8;
+    std::cout << "Enter N:";
+    int N;
+    std::cin >> N;
 
-	char x = 'X';
-	char z = '.';
+    bool rev = 0;
+    bool bck = 0;
+    int counter = 0;
 
-	for (int i = 0; i < N; i++)
-	{
-		for (int j = 0; j < N / 2; j++)
-		{
+    for( int w = 0; w < N*N ; w++)
+    {
 
-			std::cout << x;
-		}
+        counter++;
+        rev = 0;
+        for ( int i = 0; i <N ; i++)
+        {
 
-		for (int j = 0; j < N / 2; j++)
-		{
+            if (bck == 0 )
+            {
 
-			std::cout << z;
-		}
-		
-		if (i+1== N)
-		{
-			if (x == 'X')
-			{
+                if (rev == 0 )
+                {
+                    do_x();
+                    rev = 1;
+                }
+                else
+                {
+                    do_();
+                    rev = 0;
+                }
+            }
 
-				x = '.';
-				z = 'X';
-			}
-			else
-			{
-				z = '.';
-				x = 'X';
-			}
-		}
+            else
+            {
 
-		std::cout << std::endl;
-	}
+                if (rev == 0 )
+                {
+                    do_();
+                    rev = 1;
+                }
+                else
+                {
+                    do_x();
+                    rev = 0;
+                }
+            }
 
 
+        }
+
+        if ( counter == N )
+        {
+
+            bck = 1;
+        }
+
+        if ( counter == N *2 )
+        {
+
+            bck = 0;
+        }
+
+    std::cout << std::endl;
+    }
+return 0;
 }
+
+

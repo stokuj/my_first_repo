@@ -1,58 +1,119 @@
 ﻿
-#include <iostream>			
+#include <iostream>
 
 int main()
 {
 	bool back = 0;
-	int N = 7;
-	int W = 5;
-	int K = 8;
+	int N;
+
+    std::cout << "Enter N: ";
+    std::cin >> N ;
 
 	char x = 'X';
 	char z = '.';
 
-	int a = 3;
-	int b = 0;
 
-	for (int i = 0; i < N; i++)
-	{
-		
-		for (int j = a; j < 3; j++)
-		{
+    int b = 0; // mid
+    int a_odd = (N-1)/2; // right & left
+    int a_even = N/2;   // right & left
 
-			std::cout << z;
-		}
+	if ( N%2 == 0)
+    {
+        //  Parzyste EVEN
+        for (int i = 0; i < N; i++)
+        {
 
-		for (int k = b; k < 7; k++)
-		{
 
-			std::cout << x;
-		}
+            if (i == N/2)
+            {
+                a_even = a_even + 1;
+                b = b - 2;
+            }
 
-		for (int l = a; l < 3; l++)
-		{
+            // LEWE .
+            for (int j = a_even; j < N/2; j++)
+            {
 
-			std::cout << z;
-		}
+                std::cout << z;
+            }
+            //X
+            for (int k = b; k < N; k++)
+            {
 
-		if ( back == 0)
-		{
-			a = a - 1;
-			b = b + 2;
-		}
-		if (back == 1)
-		{
-			a = a + 1;
-			b = b - 2;
-		}
-		
-		if (b > N-2)
-		{
-			back = 1;
-		}
-		std::cout << std::endl;
+                std::cout << x;
+            }
+            // PRAWE .
+            for (int j = a_even; j < N/2; j++)
+            {
 
-	}
+                std::cout << z;
+            }
+            //zmiana kierunku
+            if ( back == 0)
+            {
+                a_even = a_even - 1;
+                b = b + 2;
+            }
+            if (back == 1)
+            {
+                a_even = a_even + 1;
+                b = b - 2;
+            }
 
+            if (b > N-2)
+            {
+            back = 1;
+            }
+            // koniec zmiany kierunku
+            std::cout << std::endl;
+        }
+    }
+
+    if (N%2 == 1)
+    {
+        //  Nieparzyste ODD
+        for (int i = 0; i < N; i++)
+        {
+
+
+            // LEWE .
+            for (int j = a_odd; j < (N-1)/2; j++)
+            {
+
+                std::cout << z;
+            }
+            //X
+            for (int k = b; k < N; k++)
+            {
+
+                std::cout << x;
+            }
+            // PRAWE .
+            for (int j = a_odd; j < (N-1)/2; j++)
+            {
+
+                std::cout << z;
+            }
+            //zmiana kierunku
+            if ( back == 0)
+            {
+                a_odd = a_odd - 1;
+                b = b + 2;
+            }
+            if (back == 1)
+            {
+                a_odd = a_odd + 1;
+                b = b - 2;
+            }
+
+            if (b > N-2)
+            {
+                back = 1;
+            }
+            // koniec zmiany kierunku
+            std::cout << std::endl;
+        }
+    }
 }
+
 

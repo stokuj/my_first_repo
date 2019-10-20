@@ -4,12 +4,14 @@
 
 int main()
 {
-	int N = 6;
-	int W = 5;
-	int K = 8;
+    std::cout << "Enter N:";
+    int N;
+    std::cin >> N;
 
 	char x = 'X';
 	char z = '.';
+
+	int counter = 0;
 
 	for (int i = 0; i < N; i++)
 	{
@@ -24,17 +26,24 @@ int main()
 
 			std::cout << z;
 		}
-		if (x == 'X')
-		{
 
-			x = '.';
-			z = 'X';
-		}
-		else
-		{
-			z = '.';
-			x = 'X';
-		}
+
+        counter++;
+        if ( counter == 3)
+        {
+            if (x == 'X')
+            {
+                x = '.';
+                z = 'X';
+            }
+            else
+            {
+                z = '.';
+                x = 'X';
+            }
+        counter = 0;
+        }
+
 
 		std::cout << std::endl;
 	}

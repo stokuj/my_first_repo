@@ -4,38 +4,39 @@
 
 int main()
 {
-	int N = 6;
-	int W = 5;
-	int K = 8;
+	int N;
+
+    std::cout << "Enter N: ";
+    std::cin >> N ;
 
 	char x = 'X';
 	char z = '.';
 
-	int a = 6;
+	int a = N;
 	int b = 0;
 
-	
+
 
 	for (int i = 0; i < N; i++)
 	{
 
-			
-			
-			for (int k = a ; k < 6;k++ )
+
+
+			for (int k = a ; k < N;k++ )
 			{
 				std::cout << z;
 			}
 
-			for (int l = b; l < 6; l++)
+			for (int l = b; l < N; l++)
 			{
 				std::cout << x;
 			}
 
-			
+
 			a = a - 1;
 			b = b + 1;
-			
-		
+
+
 
 			std::cout << std::endl;
 
