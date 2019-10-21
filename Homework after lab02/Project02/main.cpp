@@ -10,29 +10,29 @@ int main()
     cout << "Enter N: ";
     cin >> N ;
 
-    int f = 1;
-    int b = N;
-
     for (int i = 0; i < N; i++)
     {
-        for (int j = 1; j <= N; j++)
+        for (int j = 0; j < N; j++)
         {
-            if (( j == f) || ( j == b ))
+            if (counter == 0)
             {
-
                 cout << "#";
+                counter++;
 
             }
             else
             {
-
                 cout << ".";
+                counter++;
+            }
+            // counter reset every N + 1 Time. Move 1 every line.
+            if (counter == N+1)
+            {
+                counter = 0;
             }
 
-
         }
-        f++;
-        b--;
+
         cout << endl;
     }
 
