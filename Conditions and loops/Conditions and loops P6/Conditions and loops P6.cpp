@@ -16,6 +16,7 @@ int main()
 	int num_3 = (N/2) - ((N/2)-1); // (n/2) - ((n/2)-1)
 
 
+
 	for (int i = 0; i < N/2; i++)
 	{
 
