@@ -1,50 +1,38 @@
-﻿#include <iostream>
-
-
-
+﻿#include<iostream>
+#include<iomanip>
+using namespace std;
 int main()
-{
-    std::cout << "Enter N:";
-    int N;
-    std::cin >> N;
+   {
+   int i,j;
+   cout<<"     "<<1;//5 space chars
 
-	char x = 'X';
+   for(i = 2;i <= 10;++i)
+       cout<<"    "<<i;//4 space chars
 
-	for (int i = 0; i < N; i++)
-	{
+   cout<<endl;
+   cout<<"   ----|";
 
+   for(i = 2;i <= 10;++i)
+       cout<<"----|";
 
+   cout<<endl;
 
+   for(i = 1;i <= 10;++i)
+   {
+       cout<<setw(2)<<i<<"|";
 
+       for(j = 1;j <= 10;++j)
+          cout<<setw(4)<<j*i<<"|";
 
-		for (int j = 0; j < N; j++)
-		{
+       cout<<endl;
+       cout<<" -|----";
 
-			std::cout << x;
-			if (x == 'X')
-			{
+       for(j = 2;j <= 9;++j)
+          cout<<"|----";
 
-				x = '.';
-			}
-			else
-			{
-				x = 'X';
-			}
-		}
+       cout<<"|----|";
+       cout<<endl;
 
-		if (x == 'X')
-		{
-
-			x = '.';
-		}
-		else
-		{
-			x = 'X';
-		}
-		std::cout << std::endl;
-
-
-	}
-
-
-}
+   }
+   return 0;
+   }

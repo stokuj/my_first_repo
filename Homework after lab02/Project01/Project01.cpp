@@ -7,6 +7,7 @@ int main()
 
     std::cout << "Enter N: ";
     std::cin >> N ;
+    std::cout<< std::endl;
 
 	char x = '#';
 	char z = '.';
