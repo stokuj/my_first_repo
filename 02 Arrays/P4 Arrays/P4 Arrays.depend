@@ -1,4 +1,5 @@
 # depslib dependency file v1.0
-1571941929 source:c:\users\stokuj\documents\github\my_first_repo\02 arrays\p4 arrays\main.cpp
+1573152412 source:c:\users\stokuj\documents\github\my_first_repo\02 arrays\p4 arrays\main.cpp
 	<iostream>
+	<iomanip>
 

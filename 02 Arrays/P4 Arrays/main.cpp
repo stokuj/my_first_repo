@@ -7,56 +7,41 @@ using namespace std;
 int main()
 {
     const int W = 5;
-    const int K = 4;
-
-    int arr[W][K] = {};
+    const int K = 8;
+    int arr[W][K];
 
     int x = 1;
 
-    for (int i = 0; i < K; i = i+2)
+    for (int i = 0; i < K;i++)
+    {
+        if ( i %2 == 0 )
     {
 
-    for (int j = 0; j < W; j++)
+
+        for (int j = 0; j < W; j++)     // x 1.2.3.4.5
+        {
+            arr[j][i] = x;
+            x++;
+        }
+    }
+    else
     {
-    arr[j][i] = x;
-    x++;
-    }
-
-    for (int k = K; k >= 0; k--)
-    {
-    arr[k][i+1] = x;
-    x++;
-    }
+        for (int l = W-1 ; l >= 0; l--) // x 6.7.8.9.10
+        {
+            arr[l][i] = x;
+            x++;
+        }
 
 
     }
 
+    }
 
-//    int x = 1;
-//    int y = 1;
-//    while ( x <= 20)
-//    {
-//        while ( y <= 5)
-//        {
-//
-//            arr[W][K] = y
-//
-//
-//        }
-//
-//
-//    }
-//
-
-////////////////////////////////////////
     for (int w = 0; w < W; w++ )
     {
         for (int k = 0; k< K; k++)
         {
-
-            cout << setw(3)  << arr[w][k];
-
-
+            cout << setw( 6  )  << arr[w][k];
         }
         cout << endl;
     }
