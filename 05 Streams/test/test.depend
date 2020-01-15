@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1574960412 source:c:\users\stokuj\documents\github\my_first_repo\05 streams\test\main.cpp
+	<iostream>
+	<fstream>
+

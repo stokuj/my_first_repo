@@ -1,6 +1,7 @@
 # depslib dependency file v1.0
-1573133533 source:c:\users\stokuj\documents\github\my_first_repo\04 structures\p1\main.cpp
+1573136878 source:c:\users\stokuj\documents\github\my_first_repo\04 structures\p1\main.cpp
 	<iostream>
 	<string.h>
 	<cstdlib>
+	<cmath>
 
